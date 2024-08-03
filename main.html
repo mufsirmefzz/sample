@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #ffffff;
+        }
+        .login-btn {
+            background-color: #d9534f;
+            color: white;
+            border: 1px solid #c9302c;
+            padding: 5px 10px;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100px; /* Adjust width as needed */
+            text-align: center;
+            display: inline-block;
+        }
+        .login-btn:hover {
+            background-color: #c9302c;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="/accounts/login" class="login-btn">Login</a>
+    </nav>
+    <div class="container">
+        <h2>Home Page</h2>
+        <p>This is a simple home page for a website. You can add more content here to provide information about your site.</p>
+    </div>
+    <main>
+        {% block contents %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
